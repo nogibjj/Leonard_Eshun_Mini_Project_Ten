@@ -1,4 +1,4 @@
-# Data Engineering Mini Project One - Leonard Eshun
+# Data Engineering Mini Project Ten
 
 [![CI](https://github.com/nogibjj/Leonard_Eshun_Mini_Project_One/actions/workflows/workflow.yml/badge.svg)](https://github.com/nogibjj/Leonard_Eshun_Mini_Project_One/actions/workflows/workflow.yml)
 

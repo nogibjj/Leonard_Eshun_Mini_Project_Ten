@@ -1,23 +1,32 @@
-import json
-
-
-def add(a, b):
-    return a + b
-
-
-def get_the_capital_of_a_country(country: str) -> str:
-    capital = ""
-    # Open and read the JSON file
-    with open(file="country_capital.json", mode="r", encoding="utf-8") as file:
-        data = json.load(file)
-        capital = (
-            data[country.lower()]
-            if data.get(country.lower(), "") != ""
-            else "The country you specified was not found!"
-        )
-    return capital
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import col, avg, count
 
 
 if __name__ == "__main__":
-    print(add(1, 2))
-    print(get_the_capital_of_a_country("Ghana"))
+    # Create a SparkSession
+    spark = SparkSession.builder.appName("SamplePySparkProject").getOrCreate()
+
+    # Load data from a CSV file
+    data = spark.read.csv("data.csv", header=True, inferSchema=True)
+
+    # Perform some basic data analysis
+    average_age = data.agg(avg("data_value")).collect()[0][0]
+    total_users = data.count()
+
+    # # Filter the data
+    # filtered_data = data.filter(col("country") == "USA")
+
+    # # Group the data
+    # grouped_data = data.groupBy("gender").agg(count("*").alias("count"))
+
+    # Print results
+    print("Average age:", average_age)
+    print("Total users:", total_users)
+    # print("Filtered data:")
+    # filtered_data.show()
+    # print("Grouped data:")
+    # grouped_data.show()
+
+    # Stop the SparkSession
+    spark.stop()
+
