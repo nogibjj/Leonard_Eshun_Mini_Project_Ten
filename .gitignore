@@ -3,3 +3,5 @@ __pycache__/
 actions
 .pytest_cache
 .DS_Store
+test.py
+.ruff_cache
