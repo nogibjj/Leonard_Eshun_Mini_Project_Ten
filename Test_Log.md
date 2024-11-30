@@ -1173,3 +1173,25 @@ ORDER BY
     indicator_name, time_period
 ```
 
+### Transform and Load Test ### 
+Creating non-lookup table: air_quality <br />Creating lookup table: indicator <br />Creating lookup table: geo_data <br />Tables created. <br />Skipping the first row... <br />Inserting table data... <br />Inserting table data completed <br />Transform and Load Test Successful
+
+
+Executing custom query... <br />
+```sql
+SELECT 
+    indicator.indicator_name, 
+    air_quality.time_period, 
+    AVG(data_value) AS avg_data_value
+FROM 
+    air_quality
+INNER JOIN 
+    indicator 
+ON 
+    air_quality.fn_indicator_id = indicator.indicator_id
+GROUP BY 
+    indicator_name, time_period
+ORDER BY 
+    indicator_name, time_period
+```
+

@@ -59,7 +59,6 @@ def execute_read_query(query_to_execute: str):
     log_tests(query_to_execute, issql=True)
     result = spark.sql(query_to_execute)
     # spark.stop()
-    result.show()
     if result:
         return result
     else:

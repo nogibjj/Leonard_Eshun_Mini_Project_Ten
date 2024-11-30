@@ -24,6 +24,7 @@ ORDER BY
 def main():
     test_transform_and_load()
     result_df = execute_read_query(script_to_execute)
+    result_df.show()
     save_output(result_df.toPandas().to_markdown())
     result_df.write.csv("Aggregation_Query_Result", header=True, mode="overwrite")
 
