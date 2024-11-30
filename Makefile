@@ -3,13 +3,13 @@ install:
 		pip install -r requirements.txt
 
 test:
-	python -m pytest -vv --cov=main --cov=mylib test_*.py
+	python -m pytest -vv --cov=main --cov=my_lib test_*.py
 
 format:	
 	black *.py 
 
 lint:
-	ruff check *.py mylib/*.py
+	ruff check *.py my_lib/*.py
 
 container-lint:
 	docker run --rm -i hadolint/hadolint < Dockerfile
