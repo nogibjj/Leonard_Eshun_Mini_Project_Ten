@@ -1,6 +1,6 @@
 # Data Engineering Mini Project Ten
 
-[![CI](https://github.com/nogibjj/Leonard_Eshun_Mini_Project_Ten/actions/workflows/workflow.yml/badge.svg)](https://github.com/nogibjj/Leonard_Eshun_Mini_Project_Ten/actions/workflows/workflow.yml)
+[![CI](https://github.com/nogibjj/Leonard_Eshun_Mini_Project_Ten/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/Leonard_Eshun_Mini_Project_Ten/actions/workflows/cicd.yml)
 
 
 This repository is created as an assignment from the Data Engineering course, IDS 706. The aim is to create a python project for PySpark Data Processing.
