@@ -1,4 +1,4 @@
-# Data Engineering Mini Project Five
+# Data Engineering Mini Project Ten
 
 [![CI](https://github.com/nogibjj/Leonard_Eshun_Mini_Project_Five/actions/workflows/workflow.yml/badge.svg)](https://github.com/nogibjj/Leonard_Eshun_Mini_Project_Five/actions/workflows/workflow.yml)
 
@@ -11,7 +11,9 @@ The requirements are:
 1. Perform CRUD operations
 1. Write at least two different SQL queries
 
-
+# Observations
+1. Having a file called pyspark.py will may pyspark fail to install correctly
+1. It is extremely inefficient to add a row at a time to pyspark. It will make the mac fans come on. Add all tuples to a list and add to pyspark once.
 
 ## The functions and what they do
 

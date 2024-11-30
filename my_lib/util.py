@@ -9,3 +9,8 @@ def log_tests(log, issql=False, header=False, last_in_group=False, new_log_file=
             file.write(f"{log}\n\n\n")
         else:
             file.write(f"{log} <br />")
+
+
+def save_output(result):
+    with open("Query_Output.md", "w") as file:
+        file.write(result)
