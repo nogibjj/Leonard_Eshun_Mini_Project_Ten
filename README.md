@@ -10,7 +10,7 @@ The requirements are:
 1. Use PySpark to perform data processing on a large dataset
 1. Include at least one Spark SQL query and one data transformation
 
-# Observations
+## Observations
 1. Having a file called pyspark.py in root of the repository will may pyspark fail to install correctly
 1. It is extremely inefficient to add a row at a time to pyspark. It will make the Mac fans come on :) Better to add all tuples to a list and add to pyspark at a go if you must process a row at a time for insertion.
 
