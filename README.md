@@ -100,5 +100,3 @@ The test operation saved its steps to a log file to show the success of the oper
 
 [Please find the file here](Test_Log.md)
 
-## Next steps
-In PySpark, the saveAsTable method is used to save a DataFrame as a Hive table. The method writes the data into a managed or external Hive table, depending on the configuration and usage. Investigate this.
